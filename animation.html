@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Animation - Spencer Bi</title>
+  <meta name="description" content="Spencer Bi">
+  <meta name="author" content="Spencer Bi">
+  <link rel="stylesheet" href="css/animation.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <style media="screen">
+    h1 {
+      text-align: center;
+      font-family: 'Bree Serif', serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <article>
+    <div class="row">
+      <header class="large-12 columns">
+        <h1>Animation Syntax</h1>
+      </header>
+    </div>
+
+    <div class="row">
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="animation.html">Animation Syntax</a></li>
+          <li><a href="transition.html">Transition</a></li>
+          <li><a href="sprite.html">Sprite</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  <div id="animation" class="row">
+    <img src="img/illusion.png">
+    <img src="img/sibling.png">
+    <img src="img/dad.png">
+  </div>
+
+  <div class="row">
+    <p>The animation for the css syntax was quite complex overall. Upon making the three images, I got to work in maing the fade in and fade out animation for the images. First, I gave the animation the name of "animationFadeInOut" to be placed in the keyframes. Then, I start to set the certain opacity within each percentage of the cycle. Next, I went into the settings for the animation image, giving the name "animationFadeInOut" to link it with the keyframes, give it a timing function in ease-in-out, the iteration-count is set to infinite, and the animation duration for each cycle will be 6 seconds. Finally, I went into the each images timing on how long it should be delayed. In the form of "img:nth-of-type(#)", I made each gap of the delay to be about 2 seconds apart.</p>
+  </div>
+  <section>
+    <p>@keyframes animationFadeInOut {<br>
+     0% {opacity:1;}<br>
+     17% {opacity:1;}<br>
+     25% {opacity:0;}<br>
+     92% {opacity:0;}<br>
+     100% {opacity:1;}<br>
+    }</p>
+    <p>#animation {<br>
+      height:533px;<br>
+      width:300px;<br>
+      margin-left: auto;<br>
+      margin-right: auto;<br>
+    }</p>
+    <p>#animation img {<br>
+      position:absolute;<br>
+      animation-name: animationFadeInOut;<br>
+      animation-timing-function: ease-in-out;<br>
+      animation-iteration-count: infinite;<br>
+      animation-duration: 6s;<br>
+    }</p>
+    <p>#animation img:nth-of-type(1) {<br>
+      animation-delay: 4s;<br>
+    }</p>
+    <p>#animation img:nth-of-type(2) {<br>
+      animation-delay: 2s;<br>
+    }</p>
+    <p>#animation img:nth-of-type(3) {<br>
+      animation-delay: 0;<br>
+    }</p>
+  </section>
+</article>
+</body>
+</html>

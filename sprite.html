@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Animation - Spencer Bi</title>
+  <meta name="description" content="Spencer Bi">
+  <meta name="author" content="Spencer Bi">
+  <link rel="stylesheet" href="css/animation.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <style media="screen">
+    h1 {
+      text-align: center;
+      font-family: 'Bree Serif', serif;
+    }
+    #bulb {
+      background: url("img/sprite.png") 0 0 no-repeat;
+    }
+    #bulb:hover {
+      background: url("img/sprite.png") -701px no-repeat;
+    }
+    #bulb:active {
+      background: url("img/sprite.png") -1402px no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <div class="row">
+      <header class="large-12 columns">
+        <h1>Sprite</h1>
+      </header>
+    </div>
+
+    <div class="row">
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="animation.html">Animation Syntax</a></li>
+          <li><a href="transition.html">Transition</a></li>
+          <li><a href="sprite.html">Sprite</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="bulb">
+    </div>
+
+    <div class="row">
+      <p>First off in making this sprite is to make the image through Photoshop. Three different versions of it was made and then compressed into a single file in a 2103 x 448 png file. Also the canvas size is needed to be focused on the left center. Once made, I install the html file by placing the necessary link and effects on the, style media="screen". First, I labded the id as #bulb and begin to set up a "hover" with the link to move to the second version of the image by subtracting the amount of pixels to the right. The same for the "active" but twice as much. Thus, as the page appears, the first version on the far left of the image shows first while the second version shows upon hovering, and the third and final version shows upon clicking it. Due to the fact that I have to place the image url on the style screen for it to work, I cannot place it the css.</p>
+    </div>
+
+    <section>
+      <p>#bulb {<br>
+        background: url("img/sprite.png") 0 0 no-repeat;<br>
+        text-indent:-100%;<br>
+        height: 448px;<br>
+        width: 701px;<br>
+        border:1px solid black;<br>
+        margin-left: auto;<br>
+        margin-right: auto;<br>
+      }</p>
+      <p>#bulb:hover {<br>
+        background: url("img/sprite.png") -701px no-repeat;<br>
+      }</p>
+      <p>#bulb:active {<br>
+        background: url("img/sprite.png") -1402px no-repeat;<br>
+      }</p>
+    </section>
+  </article>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
