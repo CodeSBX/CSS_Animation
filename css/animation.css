@@ -43,6 +43,7 @@
 
 /*transition*/
   #beauty {
+    background: url("img/transition.png") 0 0 no-repeat;
     border:1px solid black;
     height: 620px;
     width: 495px;
@@ -56,12 +57,19 @@
 
 /*sprite*/
 #bulb {
+  background: url("img/sprite.png") 0 0 no-repeat;
   text-indent:-100%;
   height: 448px;
   width: 701px;
   border:1px solid black;
   margin-left: auto;
   margin-right: auto;
+}
+#bulb:hover {
+  background: url("img/sprite.png") -701px no-repeat;
+}
+#bulb:active {
+  background: url("img/sprite.png") -1402px no-repeat;
 }
 
 /*index.html css settings*/
